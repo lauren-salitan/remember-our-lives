@@ -6,6 +6,10 @@
   <title>In Loving Memory</title>
   <link rel="stylesheet" href="styles.css"/>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Juana&family=Mulish:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -16,6 +20,7 @@
       <p class="quote" id="quote"></p>
     </div>
   </header>
+
   <nav class="navbar">
     <ul>
       <li><a href="#photos">Photos</a></li>
@@ -29,16 +34,18 @@
 
   <section class="carousel" id="photos">
     <h2>Photo Memories</h2>
-    <div class="carousel-container" id="photo-carousel"></div>
+    <div class="card-section carousel-wrapper">
+      <div class="carousel-container" id="photo-carousel"></div>
+    </div>
     <button>Add Photo</button>
   </section>
 
-  <section class="obituary">
+  <section class="obituary card-section" id="obituary">
     <h2>Life Story</h2>
     <p id="obituary-text"></p>
   </section>
 
-  <section class="service">
+  <section class="service card-section" id="service">
     <h2>Funeral & Service Details</h2>
     <p id="service-date"></p>
     <p id="service-time"></p>
@@ -47,7 +54,7 @@
     <p id="service-notes"></p>
   </section>
 
-  <section class="comments">
+  <section class="comments" id="comments">
     <h2>Comments & Memories</h2>
     <div class="comment-feed" id="comment-feed"></div>
     <form>
@@ -56,15 +63,29 @@
     </form>
   </section>
 
-  <section class="family-tree">
+  <section class="family-tree" id="family-tree">
     <h2>Family Tree</h2>
     <div id="family-tree-container" class="tree-diagram"></div>
   </section>
 
-  <section class="timeline">
+  <!-- <section class="timeline" id="timeline">
+    <h2>Life Timeline</h2>
+    <ul class="timeline-split">
+      <li>
+        <div class="timeline-date">1973</div>
+        <div class="timeline-line"></div>
+        <div class="timeline-event">Born in Fitchburg, MA</div>
+      </li>
+    </ul>
+  </section> -->
+  <section class="timeline" id="timeline">
     <h2>Life Timeline</h2>
     <ul id="timeline-list"></ul>
   </section>
+  
+
+  
+  
 
   <footer>
     <p>&copy; 2025 In Loving Memory</p>
