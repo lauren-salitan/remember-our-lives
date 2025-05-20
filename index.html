@@ -5,20 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>In Loving Memory</title>
   <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  <header class="hero">
+
+  <header class="hero" id="hero">
     <div class="hero-content">
-      <h1 id="name">Name Placeholder</h1>
-      <p id="dates">Dates Placeholder</p>
-      <p class="quote" id="quote">Quote Placeholder</p>
+      <h1 id="name"></h1>
+      <p id="dates"></p>
+      <p class="quote" id="quote"></p>
     </div>
   </header>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#photos">Photos</a></li>
+      <li><a href="#obituary">Life Story</a></li>
+      <li><a href="#service">Service</a></li>
+      <li><a href="#comments">Memories</a></li>
+      <li><a href="#family-tree">Family Tree</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+    </ul>
+  </nav>
 
   <section class="carousel">
     <h2>Photo Memories</h2>
-    <button>Add Photo</button>
     <div class="carousel-container" id="photo-carousel"></div>
+    <button>Add Photo</button>
   </section>
 
   <section class="obituary">

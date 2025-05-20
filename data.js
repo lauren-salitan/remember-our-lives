@@ -1,6 +1,7 @@
 const people = {
     grandpa: {
       name: "Dr. Robert 'Bob' Betts",
+      background_image: "grandpa/lilac_blossoms.jpg",
       birthDate: "October 10, 1935",
       deathDate: "October 7, 2024",
       quote: "The woods are lovely, dark and deep, But I have promises to keep, And miles to go before I sleep, And miles to go before I sleep. ~ Robert Frost, 'Stopping by Woods on a Snowy Evening'",
@@ -22,7 +23,7 @@ const people = {
         date: "July 13, 2025",
         time: "2:00 PM",
         location: "Ellison Park, Rochester, NY",
-        mapEmbed: "https://maps.google.com/maps?q=dallas%20tx&t=&z=13&ie=UTF8&iwloc=&output=embed",
+        mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2840.6464074052654!2d-77.50458098449824!3d43.15460738937348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d6d08e96d8a27f%3A0x50898b3df0e89616!2sEllison%20Park!5e0!3m2!1sen!2sus!4v1686252083907!5m2!1sen!2sus",
         notes: "In lieu of flowers, please consider making a donation in Bob's name to either: Alzheimer's Association (https://www.alz.org/) Fisher Center for Alzheimer's Research Foundation (https://www.alzinfo.org/)"
       },
       comments: [
@@ -95,7 +96,7 @@ const people = {
         date: "May 1, 2025",
         time: "11:00 AM",
         location: "Restful Chapel, Austin, TX",
-        mapEmbed: "https://maps.google.com/maps?q=austin%20tx&t=&z=13&ie=UTF8&iwloc=&output=embed",
+        mapEmbed: "https://maps.google.com/maps?q=ellison%20park%20rochester%20ny&t=&z=13&ie=UTF8&iwloc=&output=embed",
         notes: "Parking: Lot A. Dress code: Black formal."
       },
       comments: [
