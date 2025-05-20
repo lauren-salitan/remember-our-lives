@@ -57,24 +57,49 @@ window.onload = function () {
   //   img.alt = "Memory photo";
   //   photoContainer.appendChild(img);
   // });
-  let currentPhotoIndex = 0;
 
-  function showPhoto(index) {
-    const photoContainer = document.getElementById("photo-carousel");
-    photoContainer.innerHTML = "";
+  // let currentPhotoIndex = 0;
+
+  // function showPhoto(index) {
+  //   const photoContainer = document.getElementById("photo-carousel");
+  //   photoContainer.innerHTML = "";
+  //   const img = document.createElement("img");
+  //   img.src = person.photos[index];
+  //   img.alt = "Memory photo";
+  //   photoContainer.appendChild(img);
+  // }
+
+  // function rotatePhotos() {
+  //   currentPhotoIndex = (currentPhotoIndex + 1) % person.photos.length;
+  //   showPhoto(currentPhotoIndex);
+  // }
+
+  // showPhoto(0);
+  // setInterval(rotatePhotos, 4000); // Change photo every 4s
+
+  const photoContainer = document.getElementById("photo-carousel");
+  photoContainer.innerHTML = "";
+
+  person.photos.forEach((url, index) => {
     const img = document.createElement("img");
-    img.src = person.photos[index];
-    img.alt = "Memory photo";
+    img.src = url.startsWith("/") ? url.slice(1) : url;
+    img.alt = `Memory photo ${index + 1}`;
     photoContainer.appendChild(img);
-  }
+  });
 
-  function rotatePhotos() {
-    currentPhotoIndex = (currentPhotoIndex + 1) % person.photos.length;
-    showPhoto(currentPhotoIndex);
-  }
+  let scrollAmount = 0;
+  const scrollStep = 300; // adjust based on image width
 
-  showPhoto(0);
-  setInterval(rotatePhotos, 4000); // Change photo every 4s
+  setInterval(() => {
+    scrollAmount += scrollStep;
+    if (scrollAmount >= photoContainer.scrollWidth) {
+      scrollAmount = 0;
+    }
+    photoContainer.scrollTo({
+      left: scrollAmount,
+      behavior: "smooth",
+    });
+  }, 2500);
 
   // Obituary
   document.getElementById("obituary-text").innerText = person.obituary;

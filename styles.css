@@ -115,18 +115,25 @@ body {
     margin-bottom: 1.5rem;
   }
   
-  
   .carousel-container {
     display: flex;
-    gap: 10px;
     overflow-x: auto;
-    margin-top: 10px;
+    scroll-behavior: smooth;
+    transition: all 0.5s ease; 
+    gap: 10px;
+    padding: 10px 0;
+    scrollbar-width: none; /* Firefox */
   }
-  
+
+  .carousel-container::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+
   .carousel-container img {
     height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
+    width: auto;
+    border-radius: 10px;
+    flex-shrink: 0;
   }
   
   button {
