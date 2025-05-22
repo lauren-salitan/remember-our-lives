@@ -47,19 +47,47 @@ window.onload = function () {
 
   const photoContainer = document.getElementById("photo-carousel");
   photoContainer.innerHTML = "";
-  const doubledPhotos = person.photos.concat(person.photos);
-  doubledPhotos.forEach((url, index) => {
+
+  /* build the strip twice */
+  person.photos.forEach(addImg);
+  person.photos.forEach(addImg);
+
+  function addImg(url){
     const img = document.createElement("img");
     img.src = url.startsWith("/") ? url.slice(1) : url;
-    img.alt = `Memory photo ${index + 1}`;
+    img.alt = "Memory photo";
     photoContainer.appendChild(img);
-  });
+  }
+
+/* smooth, continuous scroll */
+  const speed = 0.3;        // pixels per frame  (≈ 36 px/s)
+  let   scrollPos = 0;
+
+  function glide(){
+   scrollPos += speed;
+   if(scrollPos >= photoContainer.scrollWidth / 2){
+     scrollPos = 0;        // jump back to the start of copy A
+   }
+   photoContainer.scrollLeft = scrollPos;
+    requestAnimationFrame(glide);
+  }
+  requestAnimationFrame(glide);
+  // const doubledPhotos = person.photos.concat(person.photos);
+  // doubledPhotos.forEach((url, index) => {
+  //   const img = document.createElement("img");
+  //   img.src = url.startsWith("/") ? url.slice(1) : url;
+  //   img.alt = `Memory photo ${index + 1}`;
+  //   photoContainer.appendChild(img);
+  // });
 
   document.getElementById("obituary-text").innerText = person.obituary;
+  document.getElementById("obituary_2-text").innerText = person.obituary_2;
   document.getElementById("service-date").innerText = person.service.date;
-  document.getElementById("service-time").innerText = person.service.time;
+  // document.getElementById("service-time").innerText = person.service.time;
   document.getElementById("service-location").innerText =
     person.service.location;
+    document.getElementById("service-address").innerText =
+      person.service.address;
   document.getElementById("service-map").src = person.service.mapEmbed;
   document.getElementById("service-notes").innerText = person.service.notes;
 

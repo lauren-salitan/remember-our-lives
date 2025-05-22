@@ -3,7 +3,7 @@ const people = {
       name: "Dr. Robert 'Bob' Betts",
       background_image: "grandpa/lilac_blossoms.jpg",
       birthDate: "October 10, 1935",
-      deathDate: "October 7, 2024",
+      deathDate: "October 6, 2024",
       quote: "The woods are lovely, dark and deep, But I have promises to keep, And miles to go before I sleep, And miles to go before I sleep. ~ Robert Frost, 'Stopping by Woods on a Snowy Evening'",
       photos: [
         "grandpa/bridge.jpg",
@@ -18,13 +18,15 @@ const people = {
         "grandpa/with_valerie_selfie.jpg",
         "grandpa/aug18_2014.jpg"
       ],
-      obituary: "Dr. Robert F. (Bob) Betts, age 88, of Rochester, NY, passed away peacefully on October 6, 2024 in his residence with loving family by his side, just shy of his birthday. Bob was kind, warm hearted, outgoing, and devoted to his family and profession. He was always happy to serve as medical counsel for family and close friends. He was known for his puns and funny stories, which family and friends can recite verbatim due to their frequent retellings, a comfort to us now. Son, husband, father, grandfather, doctor, professor, author, and Betts family croquet champion. Pre-deceased by his parents, Frank and Phyllis, father and mother-in-law Leonard and Ruth Rutledge, sister and brother-in-law Barbara and Dick Hildreth, sisters-in-law Ronna Rocker and Desda (James) Fogg. Survived by loving wife of 61 years Sherrill (Rutledge); sister Shirley Elson and husband Robert; son Christopher; daughter Stephanie Jamieson and husband Mark; daughter Valerie Salitan and husband Steve; grandchildren Hayley and Julia Betts; Adam, Nora, and Grant Jamieson; and Sara and Lauren Salitan. ",
+      obituary: "Robert Betts passed peacefully October 6, 2024, just shy of his 89th birthday Pre-deceased by his parents, Frank and Phyllis, father and mother-in-law Leonard and Ruth Rutledge, sister and brother-in-law Barbara and Dick Hildreth, sisters-in-law Ronner Rocker and Desda (James) Fogg. Son, husband, father, grandfather doctor, professor, author and croquet champ. Survived by loving wife of 61 years Sherrill (Rutledge), sister Shirley (Robert) Elson, son Christopher, daughters Stephanie (Mark) Jamieson and Valerie (Steve) Salitan as well as grandchildren Hayley Betts, Julia Betts, Adam Jamieson, Nora Jamieson, Grant Jamieson, Sara Salitan and Lauren Salitan. Bob was born in Fitchburg MA, graduated B.S. from UMass-Amherst in 1959 and M.D from the University of Rochester, NY in 1964. He served his internship and residency at University Hospital in Boston Mass from 1964 to 1966 and returned to the University of Rochester to complete residency from 1966 to 1968. He served as Chief Resident of the U of R from 1968 to 1969 and went on to become Assistant Professor of Medicine, Associate Professor of Medicine and Professor of Medicine between 1970 and 2010, achieving Professor Emeritus from 2010 until his death. He was also the U of R Dept of Medicine, Director of Educational Programs from 1989 to 1997. Bob received multiple Teacher of the Year Awards during his professorship. Bob was very proud of his research career including research and publications on Cytomegalovirus, Herpes Simplex, Herpes Zoster, Varicella zoster, Influenza, HIV and Clostridium DiƯicile among others. He was Co-author of Resse and Betts' ''A Practical Approach to Infectious Disease.'' Married on June 8, 1963 in Norway Maine, Bob was well known for his devotion to his wife and family; he was the root cause of numerous overdone dinners due to dedication to his profession. Bob had a wicked sense of humor, able to roll out puns with ease and jokes when the occasion called for. Bob was also semi-legendary for having napped on some of the most well-known park and standard benches in multiple European cities, relishing his time there. Additional favorite time occupations were participating in work related softball games, ladder climbing (home related not career), porch refurbishment, home garage sale activities, Yarmouth Road block party hosting and generally enjoying the company on his family whether at home, during holidays, or on glorious trips to Europe and sojourns to Maine.",
+      obituary_2: "Forever memorialized for having been more sinned against than sinning Bob will be well loved and remembered by former patients, colleagues at home and around the world, students who are now physicians themselves, family members, the guy at Mayer Hardware and anyone Bob came in contact with.",
       service: {
-        date: "July 13, 2025",
-        time: "2:00 PM",
-        location: "Ellison Park, Rochester, NY",
+        date: "July 13, 2025 4:00 PM",
+        // time: "2:00 PM",
+        location: "Grand View Lodge - Powder Mills Park",
+        address: "154 Park Rd, Pittsford, NY 14534",
         mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2840.6464074052654!2d-77.50458098449824!3d43.15460738937348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d6d08e96d8a27f%3A0x50898b3df0e89616!2sEllison%20Park!5e0!3m2!1sen!2sus!4v1686252083907!5m2!1sen!2sus",
-        notes: "In lieu of flowers, please consider making a donation in Bob's name to either: Alzheimer's Association (https://www.alz.org/) Fisher Center for Alzheimer's Research Foundation (https://www.alzinfo.org/)"
+        notes: "Drinks and snacks 4:00-5:00 PM; Toasts/Stories/Etc at 5:00 PM; Dinner to follow; In lieu of flowers, please consider making a donation in Bob's name to either: Alzheimer's Association (https://www.alz.org/) Fisher Center for Alzheimer's Research Foundation (https://www.alzinfo.org/)"
       },
       comments: [
         { author: "Lauren Salitan", text: "My grandpa was the definition of who a man should be. He was kind, warm-hearted, funny, and always had a story to tell with a smile on his face. He was a great role model, grandfather, and friend. I will miss him dearly." },
