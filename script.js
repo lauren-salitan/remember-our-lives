@@ -3,22 +3,29 @@ function getQueryParam(param) {
   return urlParams.get(param);
 }
 
-function renderTreeSection(label, members) {
-  if (!members || members.length === 0) return null;
+const nodes = [
+  { id: 1,  pids: [2],        name: "Robert F Betts (1935 - 2024)" },
+  { id: 2,                    name: "Sherrill T (Rutledge) Betts (1939 - )" },
 
-  const section = document.createElement("div");
-  section.classList.add("tree-subsection");
+  { id: 3,  mid: 1, fid: 4,   name: "Frank J C Betts (1905 - 1985)" },
+  { id: 4,                    name: "Phyllis W (Martin) Betts (1905 - 1985)" },
 
-  const title = document.createElement("h4");
-  title.innerText = label.charAt(0).toUpperCase() + label.slice(1);
-  section.appendChild(title);
+  { id: 5,  mid: 1, fid: 2, pids: [6],  name: "Christopher Betts (1965  - )" },
+  { id: 6,                    name: "—" },
+  { id: 7,  mid: 5, fid: 6,   name: "Hayley Betts (1995  - )" },
+  { id: 8,  mid: 5, fid: 6,   name: "Julia Betts (1997  - )" },
 
-  const list = document.createElement("p");
-  list.innerText = Array.isArray(members) ? members.join(", ") : members;
-  section.appendChild(list);
+  { id: 9,  mid: 1, fid: 2, pids: [10], name: "Stephanie (Betts) Jamieson (1967  - )" },
+  { id:10,                    name: "Mark Jamieson" },
+  { id:11, mid: 9, fid:10,    name: "Adam Jamieson (1998  - )" },
+  { id:12, mid: 9, fid:10,    name: "Nora Jamieson (2000  - )" },
+  { id:13, mid: 9, fid:10,    name: "Grant Jamieson (2004  - )" },
 
-  return section;
-}
+  { id:14, mid: 1, fid: 2, pids: [15], name: "Valerie Kay (Betts) Salitan (1969  - )" },
+  { id:15,                    name: "Stephen David Salitan (1946  - )" },
+  { id:16, mid:14, fid:15,    name: "Sara Victoria Salitan (1998  - )" },
+  { id:17, mid:14, fid:15,    name: "Lauren Betts Salitan (2001  - )" }
+];
 
 window.onload = function () {
   const personKey = getQueryParam("person") || "jane";
@@ -48,7 +55,6 @@ window.onload = function () {
   const photoContainer = document.getElementById("photo-carousel");
   photoContainer.innerHTML = "";
 
-  /* build the strip twice */
   person.photos.forEach(addImg);
   person.photos.forEach(addImg);
 
@@ -59,26 +65,19 @@ window.onload = function () {
     photoContainer.appendChild(img);
   }
 
-/* smooth, continuous scroll */
-  const speed = 0.3;        // pixels per frame  (≈ 36 px/s)
+  const speed = 0.3;       
   let   scrollPos = 0;
 
   function glide(){
    scrollPos += speed;
    if(scrollPos >= photoContainer.scrollWidth / 2){
-     scrollPos = 0;        // jump back to the start of copy A
+     scrollPos = 0;       
    }
    photoContainer.scrollLeft = scrollPos;
     requestAnimationFrame(glide);
   }
   requestAnimationFrame(glide);
-  // const doubledPhotos = person.photos.concat(person.photos);
-  // doubledPhotos.forEach((url, index) => {
-  //   const img = document.createElement("img");
-  //   img.src = url.startsWith("/") ? url.slice(1) : url;
-  //   img.alt = `Memory photo ${index + 1}`;
-  //   photoContainer.appendChild(img);
-  // });
+
 
   document.getElementById("obituary-text").innerText = person.obituary;
   document.getElementById("obituary_2-text").innerText = person.obituary_2;
@@ -120,13 +119,6 @@ window.onload = function () {
     commentFeed.appendChild(btn);
   }
 
-  const familyTreeContainer = document.getElementById("family-tree-container");
-  familyTreeContainer.innerHTML = "";
-  Object.entries(person.familyTree).forEach(([label, members]) => {
-    const section = renderTreeSection(label, members);
-    if (section) familyTreeContainer.appendChild(section);
-  });
-
   const timelineList = document.getElementById("timeline-list");
   timelineList.className = "timeline-split";
   timelineList.innerHTML = "";
@@ -141,13 +133,8 @@ window.onload = function () {
     timelineList.appendChild(li);
   });
 
-
-//   const timelineList = document.getElementById("timeline-list");
-//   timelineList.innerHTML = "";
-//   person.timeline.forEach((entry) => {
-//     const li = document.createElement("li");
-//     li.innerHTML = `<strong>${entry.year}:</strong> ${entry.event}`;
-//     timelineList.appendChild(li);
-//   });
+  new FamilyTree(document.getElementById("myFamilyTree"), {
+    nodeBinding: { field_0: "name" },
+    nodes
+  });
 };
-  

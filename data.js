@@ -115,4 +115,43 @@ const people = {
       ]
     }
   };
-  
+    /* data.js (add somewhere after the people object) */
+const robertBettsTree = {
+  name: "Robert Frank Betts (1935–2024)",
+  relation: "self",
+  spouse: { name: "Sherrill Tracy (Rutledge) Betts (1939– )" },
+  parents: [
+    { name: "Frank Jesse C Betts (1905–1985)" },
+    { name: "Phyllis W (Martin) Betts (1905–1985)" }
+  ],
+  siblings: [
+    { name: "Barbara Ann Betts (1933–2024)" },
+    { name: "Shirley M Betts (1934–2010)" }
+  ],
+  children: [
+    {
+      name: "Christopher Betts (1965– )",
+      children: [
+        { name: "Hayley Betts (1995– )" },
+        { name: "Julia Rutledge Betts (1997– )" }
+      ]
+    },
+    {
+      name: "Stephanie (Betts) Jamieson (1967– )",
+      spouse: { name: "Mark Jamieson" },
+      children: [
+        { name: "Adam Jamieson (1998– )" },
+        { name: "Nora Jamieson (2000– )" },
+        { name: "Grant Jamieson (2004– )" }
+      ]
+    },
+    {
+      name: "Valerie Kay (Betts) Salitan (1969– )",
+      spouse: { name: "Stephen David Salitan (1946– )" },
+      children: [
+        { name: "Sara Victoria Salitan (1998– )" },
+        { name: "Lauren Betts Salitan (2001– )" }
+      ]
+    }
+  ]
+};

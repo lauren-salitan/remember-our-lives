@@ -243,6 +243,72 @@ form textarea {
   text-align: center;
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
+/* === Compact tree styling === */
+.tree, .tree ul {
+  padding-top: 20px;
+  position: relative;
+  list-style-type: none;
+}
+
+/* vertical connectors */
+.tree ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 2px solid var(--primary);
+  width: 0;
+  height: 20px;
+}
+
+.tree li {
+  text-align: center;
+  padding: 0 10px;
+  position: relative;
+}
+
+/* horizontal connectors */
+.tree li::before, .tree li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border-top: 2px solid var(--primary);
+  width: 50%;
+  height: 20px;
+}
+
+.tree li::before {  /* left arm */
+  left: -50%;
+}
+
+.tree li::after {   /* right arm */
+  right: -50%;
+  border-left: 2px solid var(--primary);
+}
+
+/* remove arms on root & leaf */
+.tree li:only-child::before,
+.tree li:only-child::after,
+.tree li:first-child::before,
+.tree li:last-child::after {
+  border: 0;
+}
+
+/* person cards */
+.person {
+  display: inline-block;
+  padding: 6px 12px;
+  background: var(--accent);
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  min-width: 120px;
+}
+
+.person.spouse {
+  border-style: dashed;
+}
 
 /* .timeline ul {
   position: relative;
