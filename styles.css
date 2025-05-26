@@ -284,3 +284,48 @@ footer {
   color: #666;
   font-style: italic;
 }
+
+
+/* 1) box fill + border */
+/* svg.hugo .node>rect {
+  fill: var(--accent) !important;      
+  stroke: var(--primary) !important;    
+  stroke-width: 2px !important;
+
+} */
+
+/* 2) node text color */
+/* svg.hugo .node>text {
+  fill: var(--primary) !important;
+  font-family: 'Old Standard TT', serif;
+  font-size: 14px;
+} */
+
+/* 3) connector lines */
+[data-l-id] path {
+  stroke: var(--primary) !important;
+}
+
+/* 4) chart background */
+#myFamilyTree>svg {
+  background-color: var(--accent);
+}
+
+svg.tommy .node>rect {
+  fill: var(--accent);      
+  stroke: var(--primary) !important;    
+  stroke-width: 2px !important;
+} 
+svg.tommy .node>text {
+  fill: var(--primary) !important;
+  font-family: 'Old Standard TT', serif;
+  font-size: 14px;
+}
+/* #myFamilyTree use[data-ctrl-n-t-menu-id="9"] { 
+  display:none!important; 
+} */
+
+svg.tommy [data-n-id="1"].node>rect {
+  fill: #653D73 !important;
+
+}
