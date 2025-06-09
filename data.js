@@ -29,7 +29,6 @@ const people = {
     //   "Forever memorialized for having been more sinned against than sinning Bob will be well loved and remembered by former patients, colleagues at home and around the world, students who are now physicians themselves, family members, the guy at Mayer Hardware and anyone Bob came in contact with.",
     service: {
       date: "July 13, 2025 4:00 PM",
-      // time: "2:00 PM",
       location: "Grand View Lodge - Powder Mills Park",
       address: "154 Park Rd, Pittsford, NY 14534",
       mapEmbed:
