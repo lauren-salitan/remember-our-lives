@@ -61,10 +61,26 @@ window.onload = function () {
   requestAnimationFrame(glide);
 
   // Obituary
-  document.getElementById("obituary-text").innerText = person.obituary;
-  if (person.obituary_2) {
-    document.getElementById("obituary_2-text").innerText = person.obituary_2;
-  }
+  // document.getElementById("obituary-text").innerText = person.obituary;
+  // if (person.obituary_2) {
+  //   document.getElementById("obituary_2-text").innerText = person.obituary_2;
+  // }
+  const obitEl = document.getElementById("obituary-text");
+  obitEl.innerHTML = `
+    To read ${person.name}'s obituary in full, please see
+    <a class="link" href="${person.obituaryLink}" target="_blank">here</a>.
+  `;
+
+  // append the clickable screenshot
+  obitEl.innerHTML += `
+    <a href="${person.obituaryLink}" target="_blank">
+      <img
+        src="${person.obituaryImage}"
+        alt="${person.name} obituary screenshot"
+        class="obit-image"
+      />
+    </a>
+  `;
 
   // Service details
   document.getElementById("service-date").innerText = person.service.date;
@@ -75,7 +91,27 @@ window.onload = function () {
     person.service.location;
   document.getElementById("service-address").innerText = person.service.address;
   document.getElementById("service-map").src = person.service.mapEmbed;
-  document.getElementById("service-notes").innerText = person.service.notes;
+
+
+  // const notes = document.getElementById("service-notes");
+  // notes.innerHTML = "";
+  // person.service.notes.forEach((entry) => {
+  //   const li = document.createElement("li");
+  //   li.innerHTML = `
+  //   <div class="note-text">${entry.note}</div>
+  //   `;
+  //   notes.appendChild(li);
+  // });
+  // document.getElementById("service-notes").innerHTML = person.service.notes;
+
+
+  const notesEl = document.getElementById("service-notes");
+  notesEl.innerHTML = "";
+  person.service.notes.forEach(entry => {
+    const li = document.createElement("li");
+    li.textContent = entry.note;
+     notesEl.appendChild(li);
+   });
 
   // Comments
   const commentFeed = document.getElementById("comment-feed");

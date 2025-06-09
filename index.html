@@ -26,8 +26,8 @@
   <nav class="navbar">
     <ul>
       <li><a href="#photos">Photos</a></li>
-      <li><a href="#obituary">Life Story</a></li>
       <li><a href="#service">Service</a></li>
+      <li><a href="#obituary">Life Story</a></li>
       <li><a href="#comments">Memories</a></li>
       <li><a href="#family-tree">Family Tree</a></li>
       <li><a href="#timeline">Timeline</a></li>
@@ -42,29 +42,35 @@
     <!-- <button>ADD PHOTO</button> -->
   </section>
 
-  <section class="obituary card-section" id="obituary">
-    <h2>Life Story</h2>
-    <p id="obituary-text"></p>
-    <p id="obituary_2-text"></p>
-  </section>
-
   <section class="service card-section" id="service">
-    <h2>Funeral & Service Details</h2>
+    <h2>Celebration of Life Service Details</h2>
     <p id="service-date"></p>
     <p id="service-time"></p>
     <p id="service-location"></p>
     <p id="service-address"></p>
     <iframe id="service-map" width="100%" height="200" style="border:0;" allowfullscreen></iframe>
-    <p id="service-notes"></p>
+    <ul id="service-notes"></ul>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfLEdlkogJ-s25dJIMIMhfV657VntJMVcZ6iFf3S5UP0-dkAw/viewform?embedded=true" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </section>
+
+  <section class="obituary card-section" id="obituary">
+    <h2>Life Story</h2>
+    <!-- <p id="life-story-text">To read [name]'s obituary in full, please see <a target="_blank" href="[obituaryLink]">here</a>.</p>
+    <a target="_blank" href="[obituaryLink]">
+      <img src="[obituaryImage]">
+    </a>  -->
+    <p id="obituary-text"></p>
+    <p id="obituary_2-text"></p>
+    
   </section>
 
   <section class="comments" id="comments">
     <h2>Comments & Memories</h2>
     <div class="comment-feed" id="comment-feed"></div>
-    <form>
+    <!-- <form>
       <textarea placeholder="Share a memory..."></textarea>
       <button type="submit">Post</button>
-    </form>
+    </form> -->
   </section>
 
   <section id="family-tree" class="section">

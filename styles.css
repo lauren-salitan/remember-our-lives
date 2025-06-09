@@ -365,3 +365,34 @@ svg.tommy [data-n-id="1"].node>text {
   color: var(--text-secondary);
   font-style: italic;
 }
+
+
+/* Obituary screenshot styling */
+.obit-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  transition: opacity 0.3s ease;
+
+}
+
+.obit-image:hover {
+  opacity: 0.4;           /* fades the image on hover */
+}
+
+.link {
+  color: #5A3E69;
+}
+
+/* #service-notes {
+  list-style: inside disc;
+  margin-left: 1rem;
+}
+#service-notes li {
+  margin-bottom: 0.5rem;
+} */
+
+/* form::after{
+  max-height: 50px;
+} */
