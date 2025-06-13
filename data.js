@@ -1,26 +1,27 @@
 const people = {
-  grandpa: {
+  robert_betts: {
     name: "Dr. Robert 'Bob' Betts",
-    background_image: "grandpa/lilac_blossoms.jpg",
+    background_image: "robert_betts/lilac_blossoms.jpg",
     birthDate: "October 10, 1935",
     deathDate: "October 6, 2024",
     quote:
       "The woods are lovely, dark and deep, But I have promises to keep, And miles to go before I sleep, And miles to go before I sleep. ~ Robert Frost, 'Stopping by Woods on a Snowy Evening'",
     photos: [
-      "grandpa/bridge.jpg",
-      "grandpa/blossoms.jpg",
-      "grandpa/bolshoi_theatre.jpg",
-      "grandpa/cheap_market.JPG",
-      "grandpa/grandpa_and_grandmother.jpg",
-      "grandpa/smiling_at_table.JPG",
-      "grandpa/valerie_grandmother_graduation.jpeg",
-      "grandpa/valerie_wedding.jpg",
-      "grandpa/with_lauren_berlin.jpg",
-      "grandpa/with_valerie_selfie.jpg",
-      "grandpa/aug18_2014.jpg",
+      "robert_betts/bridge.jpg",
+      "robert_betts/blossoms.jpg",
+      "robert_betts/bolshoi_theatre.jpg",
+      "robert_betts/cheap_market.JPG",
+      "robert_betts/grandpa_and_grandmother.jpg",
+      "robert_betts/smiling_at_table.JPG",
+      "robert_betts/valerie_grandmother_graduation.jpeg",
+      "robert_betts/valerie_wedding.jpg",
+      "robert_betts/with_lauren_berlin.jpg",
+      "robert_betts/with_valerie_selfie.jpg",
+      "robert_betts/aug18_2014.jpg",
+      "robert_betts/cropped_obit.jpg",
     ],
     obituaryLink: "https://www.crawfordfuneralhome.com/obituary/DrRobert-Betts",
-    obituaryImage: "grandpa/grandpa-obit-screenshot.png",
+    obituaryImage: "robert_betts/robert_betts_obit.png",
     // obituary:
     //   "To view Dr. Robert Betts' full obituary, please see <a href=''https://www.crawfordfuneralhome.com/obituary/DrRobert-Betts'' target=''_blank''>here</a> \n <img src=''grandpa/grandpa-obit-screenshot.png''>",
     // obituary:

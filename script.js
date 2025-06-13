@@ -5,7 +5,7 @@ function getQueryParam(param) {
 
 // Main initialization
 window.onload = function () {
-  const personKey = getQueryParam("person") || "grandpa";
+  const personKey = getQueryParam("person") || "robert_betts";
   const person = people[personKey];
   const heroSection = document.getElementById("hero");
 
