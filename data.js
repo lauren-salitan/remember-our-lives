@@ -19,7 +19,7 @@ const people = {
       "grandpa/with_valerie_selfie.jpg",
       "grandpa/aug18_2014.jpg",
     ],
-    obituaryLink: "https://www.raymondhome.com/obituary/DrRobert-Betts",
+    obituaryLink: "https://www.crawfordfuneralhome.com/obituary/DrRobert-Betts",
     obituaryImage: "grandpa/grandpa-obit-screenshot.png",
     // obituary:
     //   "To view Dr. Robert Betts' full obituary, please see <a href=''https://www.crawfordfuneralhome.com/obituary/DrRobert-Betts'' target=''_blank''>here</a> \n <img src=''grandpa/grandpa-obit-screenshot.png''>",
@@ -120,24 +120,24 @@ const people = {
         year: 1961,
         event: "Met Sherrill Rutledge at the University of Rochester",
       },
+      { year: 1963, event: "Married Sherrill Rutledge in Norway, ME" },
       {
         year: 1964,
         event:
           "Graduated with an MD from the University of Rochester School of Medicine",
       },
-      { year: 1963, event: "Married Sherrill Rutledge in Norway, ME" },
-      { year: 1965, event: "Son Christopher Betts born on April 15" },
-      { year: 1967, event: "Daughter Stephanie Betts Jamieson born" },
-      {
-        year: 1969,
-        event: "Daughter Valerie Betts Salitan born on November 8",
-      },
+      { year: 1964, event: "Son Christopher Betts born on April 15" },
       {
         year: 1964,
         event: "Internship and residency at University Hospital in Boston, MA",
       },
       { year: 1966, event: "Residency at the University of Rochester" },
+      { year: 1967, event: "Daughter Stephanie Betts Jamieson born on July 14" },
       { year: 1968, event: "Chief Resident at the University of Rochester" },
+      {
+        year: 1969,
+        event: "Daughter Valerie Betts Salitan born on November 8",
+      },
       {
         year: 1970,
         event:
@@ -151,54 +151,55 @@ const people = {
         event:
           "Served as Director of Educational Programs for the Department of Medicine at University of Rochester",
       },
+      { year: 1994, event: "Granddaughter Hayley Betts born on September 1" },
       {
         year: 1996,
         event:
           "Receives Council of the Medical Alumni Association Gold Medal Award",
       },
-      { year: 1995, event: "Granddaughter Hayley Betts born on September 1" },
-      { year: 1997, event: "Granddaughter Julia Betts born on April 27" },
+      { year: 1997, event: "Granddaughter Julia Betts born on March 27" },
       { year: 1998, event: "Grandson Adam Jamieson born" },
       { year: 1998, event: "Granddaughter Sara Salitan born on July 7" },
-      { year: 2000, event: "Granddaughter Nora Jamieson born" },
+      { year: 2000, event: "Granddaughter Nora Jamieson born on March 29" },
       { year: 2001, event: "Granddaughter Lauren Salitan born on February 14" },
-      { year: 2004, event: "Grandson Grant Jamieson born" },
-      { year: 2010, event: "Sister Shirley Elson passed away on August 21" },
+      { year: 2004, event: "Grandson Grant Jamieson born on December 25" },
+      // { year: 2010, event: "Sister Shirley Elson passed away on August 21" },
       { year: 2010, event: "Professor Emeritus at University of Rochester" },
-      { year: 2024, event: "Sister Barbara Betts passed away" },
+      { year: 2024, event: "Sister Barbara Betts Hildreth passed away on February 19" },
       {
         year: 2024,
         event:
           "Passed away peacefully on October 6, 2024, just shy of his 89th birthday",
       },
     ],
-  },
-  jane: {
-    name: "Jane Doe",
-    birthDate: "January 1, 1950",
-    deathDate: "April 20, 2025",
-    quote: "Forever in our hearts",
-    photos: ["images/photo1.jpg", "images/photo2.jpg", "images/photo3.jpg"],
-    obituary: "Jane lived a vibrant life full of adventure and love...",
-    service: {
-      date: "May 1, 2025",
-      time: "11:00 AM",
-      location: "Restful Chapel, Austin, TX",
-      mapEmbed:
-        "https://maps.google.com/maps?q=ellison%20park%20rochester%20ny&t=&z=13&ie=UTF8&iwloc=&output=embed",
-      notes: "Parking: Lot A. Dress code: Black formal.",
-    },
-    comments: [{ author: "Alice", text: "She was a light in our lives." }],
-    familyTree: {
-      parent: "👵",
-      children: ["👩", "👨", "🧒"],
-    },
-    timeline: [
-      { year: 1950, event: "Born in New York" },
-      { year: 1972, event: "Graduated from university" },
-      { year: 1980, event: "Married the love of her life" },
-    ],
-  },
+  }
+  // ,
+  // jane: {
+  //   name: "Jane Doe",
+  //   birthDate: "January 1, 1950",
+  //   deathDate: "April 20, 2025",
+  //   quote: "Forever in our hearts",
+  //   photos: ["images/photo1.jpg", "images/photo2.jpg", "images/photo3.jpg"],
+  //   obituary: "Jane lived a vibrant life full of adventure and love...",
+  //   service: {
+  //     date: "May 1, 2025",
+  //     time: "11:00 AM",
+  //     location: "Restful Chapel, Austin, TX",
+  //     mapEmbed:
+  //       "https://maps.google.com/maps?q=ellison%20park%20rochester%20ny&t=&z=13&ie=UTF8&iwloc=&output=embed",
+  //     notes: "Parking: Lot A. Dress code: Black formal.",
+  //   },
+  //   comments: [{ author: "Alice", text: "She was a light in our lives." }],
+  //   familyTree: {
+  //     parent: "👵",
+  //     children: ["👩", "👨", "🧒"],
+  //   },
+  //   timeline: [
+  //     { year: 1950, event: "Born in New York" },
+  //     { year: 1972, event: "Graduated from university" },
+  //     { year: 1980, event: "Married the love of her life" },
+  //   ],
+  // },
 };
 /* data.js (add somewhere after the people object) */
 const robertBettsTree = {

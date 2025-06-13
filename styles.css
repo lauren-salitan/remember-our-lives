@@ -17,6 +17,26 @@
   --transition-fast: all 0.2s ease-in-out;
 
 }
+/* Mobile phones */
+@media (max-width: 480px) {
+  /* Hero: even smaller fonts */
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  /* Navbar: collapse border radius */
+  .navbar {
+    border-radius: 0;
+  }
+
+  /* Carousel: tighter gap */
+  .carousel-container {
+    gap: 5px;
+  }
+}
 
 body {
   margin: 0;
