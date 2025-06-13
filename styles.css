@@ -17,9 +17,74 @@
   --transition-fast: all 0.2s ease-in-out;
 
 }
-/* Mobile phones */
+
+/* ====== Mobile Responsiveness Additions ====== */
+
+/* Tablets and smaller screens (up to 768px) */
+@media (max-width: 768px) {
+  /* Navbar: allow horizontal scroll on small screens */
+  .navbar {
+    max-width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .navbar ul {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+  .navbar ul li {
+    flex: 0 0 auto;
+  }
+  /* Hide scrollbar on WebKit browsers */
+  .navbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hero section: reduce padding & scale text */
+  header.hero {
+    padding: 60px 10px 40px;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  /* Sections & cards: fluid container */
+  section,
+  .card-section,
+  #family-tree-section {
+    max-width: 100%;
+    width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  /* Carousel images: shorter for better fit */
+  .carousel-container img {
+    height: 150px;
+  }
+
+  /* Timeline: tighter grid columns */
+  .timeline-split li {
+    grid-template-columns: 80px 10px 1fr;
+  }
+  .timeline-date {
+    font-size: 16px;
+  }
+}
+
+/* Mobile phones (up to 480px) */
 @media (max-width: 480px) {
-  /* Hero: even smaller fonts */
+  /* Hero text sizing */
   .hero-content h1 {
     font-size: 1.5rem;
   }
@@ -27,16 +92,12 @@
     font-size: 0.9rem;
   }
 
-  /* Navbar: collapse border radius */
-  .navbar {
-    border-radius: 0;
-  }
-
-  /* Carousel: tighter gap */
+  /* Carousel spacing */
   .carousel-container {
     gap: 5px;
   }
 }
+
 
 body {
   margin: 0;
