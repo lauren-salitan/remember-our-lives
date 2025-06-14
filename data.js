@@ -2,7 +2,7 @@ const people = {
   robert_betts: {
     name: "Dr. Robert 'Bob' Betts",
     background_image: "robert_betts/lilac_blossoms.jpg",
-    birthDate: "October 10, 1935",
+    birthDate: "October 12, 1935",
     deathDate: "October 6, 2024",
     quote:
       "The woods are lovely, dark and deep, But I have promises to keep, And miles to go before I sleep, And miles to go before I sleep. ~ Robert Frost, 'Stopping by Woods on a Snowy Evening'",
