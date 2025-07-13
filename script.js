@@ -47,7 +47,7 @@ window.onload = function () {
   }
 
   // Auto-scroll carousel
-  const speed = 0.3;
+  const speed = 0.2;
   let scrollPos = 0;
 
   function glide() {
