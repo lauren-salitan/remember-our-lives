@@ -7,89 +7,98 @@
   <title>In Loving Memory</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Juana&family=Mulish:wght@400;600&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header class="hero" id="hero">
     <div class="hero-content">
+      <p class="hero-kicker">In Loving Memory</p>
       <h1 id="name"></h1>
       <p id="dates"></p>
       <p class="quote" id="quote"></p>
+      <a class="hero-cta" href="#photos">View Memories</a>
     </div>
   </header>
 
-  <nav class="navbar">
-    <ul>
-      <li><a href="#photos">Photos</a></li>
-      <li><a href="#service">Service</a></li>
-      <li><a href="#obituary">Life Story</a></li>
-      <li><a href="#comments">Comments</a></li>
-      <li><a href="#timeline">Timeline</a></li>
-      <li><a href="#family-tree">Family Tree</a></li>
-      <li><a href="#playlist">Playlist</a></li>
-    </ul>
-  </nav>
+  <main class="page-shell">
+    <nav class="navbar" aria-label="Memorial sections">
+      <ul>
+        <li><a href="#photos">Photos</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#obituary">Life Story</a></li>
+        <li><a href="#comments">Comments</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#family-tree">Family Tree</a></li>
+        <li><a href="#playlist">Playlist</a></li>
+      </ul>
+    </nav>
 
-  <section class="carousel" id="photos">
-    <h2>Photo Memories</h2>
-    <div class="card-section carousel-wrapper">
-      <div class="carousel-container" id="photo-carousel"></div>
-    </div>
-    <!-- <button>ADD PHOTO</button> -->
-  </section>
+    <section class="carousel memorial-section" id="photos">
+      <h2>Photo Memories</h2>
+      <div class="card-section carousel-wrapper">
+        <div class="carousel-container" id="photo-carousel"></div>
+      </div>
+      <!-- <button>ADD PHOTO</button> -->
+    </section>
 
-  <section class="service card-section" id="service">
-    <h2>Celebration of Life Service Details</h2>
-    <p id="service-date"></p>
-    <p id="service-time"></p>
-    <p id="service-location"></p>
-    <p id="service-address"></p>
-    <iframe id="service-map" width="100%" height="200" style="border:0;" allowfullscreen></iframe>
-    <ul id="service-notes"></ul>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfLEdlkogJ-s25dJIMIMhfV657VntJMVcZ6iFf3S5UP0-dkAw/viewform?embedded=true" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-  </section>
+    <section class="service card-section memorial-section" id="service">
+      <h2>Celebration of Life Service Details</h2>
+      <div class="service-layout">
+        <div class="service-details">
+          <div class="service-meta">
+            <p id="service-date"></p>
+            <p id="service-time"></p>
+            <p id="service-location"></p>
+            <p id="service-address"></p>
+          </div>
+          <iframe id="service-map" title="Service location map" width="100%" height="200" style="border:0;" allowfullscreen></iframe>
+          <ul id="service-notes"></ul>
+        </div>
+        <div class="service-form">
+          <iframe title="Celebration of life RSVP form" src="https://docs.google.com/forms/d/e/1FAIpQLSfLEdlkogJ-s25dJIMIMhfV657VntJMVcZ6iFf3S5UP0-dkAw/viewform?embedded=true" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+      </div>
+    </section>
 
-  <section class="obituary card-section" id="obituary">
-    <h2>Life Story</h2>
-    <!-- <p id="life-story-text">To read [name]'s obituary in full, please see <a target="_blank" href="[obituaryLink]">here</a>.</p>
+    <section class="obituary card-section memorial-section" id="obituary">
+      <h2>Life Story</h2>
+      <!-- <p id="life-story-text">To read [name]'s obituary in full, please see <a target="_blank" href="[obituaryLink]">here</a>.</p>
     <a target="_blank" href="[obituaryLink]">
       <img src="[obituaryImage]">
     </a>  -->
-    <p id="obituary-text"></p>
-    <p id="obituary_2-text"></p>
-    
-  </section>
+      <p id="obituary-text"></p>
+      <p id="obituary_2-text"></p>
+    </section>
 
-  <section class="comments" id="comments">
-    <h2>Comments & Memories</h2>
-    <div class="comment-feed" id="comment-feed"></div>
-    <!-- <form>
+    <section class="comments memorial-section" id="comments">
+      <h2>Comments & Memories</h2>
+      <div class="comment-feed" id="comment-feed"></div>
+      <!-- <form>
       <textarea placeholder="Share a memory..."></textarea>
       <button type="submit">Post</button>
     </form> -->
-  </section>
+    </section>
 
-  <section class="timeline" id="timeline">
-    <h2>Life Timeline</h2>
-    <ul id="timeline-list"></ul>
-  </section>
+    <section class="timeline memorial-section" id="timeline">
+      <h2>Life Timeline</h2>
+      <ul id="timeline-list"></ul>
+    </section>
 
-  <section id="family-tree" class="section">
-    <h2 class="section-heading">Family Tree</h2>
-    <div id="myFamilyTree" style="width:100%; height:700px;">
-      <div class="loading-message">Loading family tree...</div>
-    </div>
-  </section>
+    <section id="family-tree" class="section memorial-section">
+      <h2 class="section-heading">Family Tree</h2>
+      <div id="myFamilyTree" style="width:100%; height:700px;">
+        <div class="loading-message">Loading family tree...</div>
+      </div>
+    </section>
 
-  <section id="playlist" class="section">
-    <h2 class="section-heading">Playlist</h2>
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5htL51kQc407ceSc1Gax3w?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  </section>
+    <section id="playlist" class="section memorial-section">
+      <h2 class="section-heading">Playlist</h2>
+      <iframe title="Memorial playlist" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5htL51kQc407ceSc1Gax3w?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </section>
+  </main>
   <footer>
     <p>&copy; 2025 In Loving Memory by Lauren Salitan</p>
   </footer>
